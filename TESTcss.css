@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rainbow {
+    0% {
+      color: rgb(122, 23, 244)
+    }
+    35% {
+      color: rgb(12, 123, 44)
+    }
+    78% {
+      color: rgb(244, 104, 23)
+    }
+    100% {
+      color: rgb(23, 244, 240)
+    }
+  }
+
+  .rainbow {
+    animation: rainbow 4s linear infinite;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px black solid;
+    margin-bottom: 25px;
+    
+  }
+  
+  .name {
+    padding-bottom: 20px;
+  }
+  
+  .letter {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  
+  
+  .letters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 0px;
+    place-items: center;
+    margin: 0;
+    margin-top: 25px;
+  }
+  
+  .loading {
+    animation: spin 1s infinite linear;
+  }
+  
+  .info-bar {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  
+  .show {
+    visibility: visible;
+  }
+  
+  .correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .close {
+    background-color: orange;
+    color: white;
+  }
+  
+  .wrong {
+    background-color: grey;
+    color: white;
+  }
